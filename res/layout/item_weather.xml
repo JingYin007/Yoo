@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_weight="2"
+        android:id="@+id/iv_weather"
+        android:layout_width="220dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="7dp"
+        android:src="@drawable/weather_normal" />
+	<LinearLayout 
+	    android:layout_weight="1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:gravity="center"
+	    android:orientation="vertical"
+	    >
+	    <TextView 
+	        android:layout_weight="1"
+	        android:id="@+id/tv_weather"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:paddingTop="13dp"
+	        android:paddingLeft="5dp"
+	        android:textSize="17dp"
+	        android:textColor="@color/softGreen"
+	        android:text="天气"/>
+	    <LinearLayout 
+	        android:layout_weight="1"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        android:gravity="center"
+	        android:orientation="horizontal">
+	        <TextView
+	            android:layout_weight="1"
+	            android:id="@+id/tv_wenDu"
+	            android:gravity="center_horizontal"
+	            android:textColor="@color/darkyellow"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="温度"/>
+	         <TextView
+	            android:textColor="@color/darkyellow"
+	            android:layout_weight="1"
+	            android:id="@+id/tv_fengLi"
+	            android:gravity="center_horizontal"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="风力"/>
+	         <TextView
+	            android:textColor="@color/darkyellow"
+	            android:layout_weight="1"
+	            android:id="@+id/tv_date"
+	            android:gravity="center_horizontal"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="时间"/>
+	    </LinearLayout>
+	    
+	</LinearLayout>
+    
+
+</LinearLayout>

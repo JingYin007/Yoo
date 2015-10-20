@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg6"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:id="@+id/ll_top_bg"
+        android:background="@color/top_themeColor"
+        android:orientation="horizontal">
+        <TextView
+                android:layout_weight="3"
+                android:paddingLeft="3dp"
+                android:drawableLeft="@drawable/top_back"
+                android:id="@+id/tv_back"
+                android:textColor="@color/dark_hese"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/top_back"
+                android:gravity="center" />
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/local_music"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#008000" />
+            <ImageView
+                android:layout_weight="3"
+                android:id="@+id/iv_playMusic"
+                android:paddingRight="3dp"
+                android:src="@drawable/top_music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" />
+
+    </LinearLayout>
+	
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+	    android:layout_below="@+id/ll_top_bg"
+        android:orientation="vertical"
+        >
+	<ListView
+	    android:layout_weight="5"
+	    android:id="@+id/local_list"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:divider="@null" >
+     
+	</ListView>
+	<include 
+	    android:layout_weight="1"
+	    layout="@layout/bottom_player"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"/>
+	</LinearLayout>
+	
+	<LinearLayout
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:orientation="vertical" >
+
+		<ImageView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="@null"
+		    android:src="@drawable/sup8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:text="亲，稍等一下，加载中..." />
+    </LinearLayout>
+	
+</RelativeLayout>

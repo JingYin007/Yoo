@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg6"
+    tools:context=".MusicView" >
+
+     <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:id="@+id/ll_top_bg"
+        android:background="@color/top_themeColor"
+        android:orientation="horizontal">
+        <TextView
+                android:layout_weight="3"
+                android:paddingLeft="3dp"
+                android:drawableLeft="@drawable/top_back"
+                android:id="@+id/tv_back"
+                android:textColor="@color/dark_hese"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/top_back"
+                android:gravity="center" />
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/local_music"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#008000" />
+            <ImageView
+                android:layout_weight="3"
+                android:id="@+id/iv"
+                android:paddingRight="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" />
+
+    </LinearLayout>
+    
+    
+    <ListView
+        android:id="@+id/lvSongs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:divider="@null"
+        android:layout_weight="8" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_MusicDetail"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="3dp"
+            android:background="@drawable/sup2" />
+
+        <SeekBar
+            android:id="@+id/pbDuration"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="10dip"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="3dip"
+            android:layout_marginTop="3dip"
+            android:layout_toRightOf="@+id/btn_MusicDetail"
+            android:layout_toLeftOf="@+id/btnStartStop"
+            android:maxHeight="2dip"
+            android:minHeight="2dip"
+            android:progressDrawable="@drawable/progress_style"
+            android:thumb="@drawable/seekbar_thumb"
+            android:thumbOffset="0dip" />
+
+        <Button
+            android:id="@+id/btnStartStop"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginRight="3dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/music_start" />
+
+        <TextView
+            android:id="@+id/tvCurrentMusic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/btnStartStop"
+            android:layout_toRightOf="@+id/btn_MusicDetail"
+            android:gravity="center|center_vertical"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:singleLine="true"
+            android:text="@string/musicName"
+            android:textColor="@color/darkGreen"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

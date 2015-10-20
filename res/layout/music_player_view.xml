@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"   
+    android:id="@+id/bg_player" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bg_player1">
+	<LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center"
+        android:background="@color/top_themeColor"
+        android:orientation="horizontal">
+        <TextView
+                android:layout_weight="3"
+                android:paddingLeft="3dp"
+                android:drawableLeft="@drawable/top_back"
+                android:id="@+id/tv_back"
+                android:textColor="@color/dark_hese"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/top_back"
+                android:gravity="center" />
+            <TextView
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/musicName"
+                android:text="@string/musicName"
+                android:singleLine="true"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="#008000" />
+            <TextView
+                android:layout_weight="3"
+                android:id="@+id/tv_mark"
+                android:paddingRight="3dp"
+                android:drawableLeft="@drawable/top_nothing2"
+                android:drawableRight="@drawable/music"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:gravity="center" />
+
+    </LinearLayout>
+	<ImageView
+        android:id="@+id/id_iv_tabline"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/tabline" />
+		
+		<com.mo.lyric.LyricView
+		    android:id="@+id/lyricView"
+		    android:layout_weight="1"
+		    android:layout_marginTop="25dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_marginLeft="7dp"
+		    android:layout_marginRight="7dp"
+		    android:fadingEdge="none"
+		    android:fillViewport="true"
+		    android:scrollbars="vertical" >
+		</com.mo.lyric.LyricView>
+	
+		<SeekBar
+		    android:id="@+id/seekbar"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:thumb="@drawable/seekbar_thumb"
+		    android:progress="0"
+		    android:secondaryProgress="0"
+		    android:progressDrawable="@drawable/seekbar_pro"
+		    />
+		
+	<LinearLayout
+	    android:layout_weight="2"
+	    android:id="@+id/playing"
+	    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <RelativeLayout
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+        	android:layout_height="match_parent"
+        	android:orientation="horizontal">
+            <TextView
+                android:id="@+id/pre_time"
+                android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginStart="10dp"
+        		android:layout_marginLeft="10dp"
+        		android:textSize="17sp"	
+        		android:textColor="@color/darkGreen"
+        		android:text="@string/time"/>
+            <TextView
+			    android:id="@+id/total_time"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentRight="true"
+			    android:layout_marginEnd="10dp"
+			    android:layout_marginRight="10dp"
+			    android:textColor="@color/darkyellow"
+			    android:textSize="17sp"	
+			    android:text="@string/time_total" />
+        </RelativeLayout>
+        
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/layout_play"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/pre_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/pre_icon" />
+
+		    <ImageView
+		        android:id="@+id/play_pause"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="2"
+		        android:src="@drawable/playpause" />
+		    <ImageView
+		        android:id="@+id/next_play"
+		        android:layout_width="wrap_content"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/next_icon"/>
+        </LinearLayout>
+	</LinearLayout>
+</LinearLayout>

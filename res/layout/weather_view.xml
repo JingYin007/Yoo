@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_weather"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg0_fine_day"
+    android:orientation="vertical"
+    tools:context=".NoteFrag" >
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/tv_diDian"
+            android:gravity="center"
+            android:text="北京"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:textSize="22dp"
+            android:textColor="@color/darkgrey"
+            android:layout_height="38dp" />
+
+	<TextView
+    	android:id="@+id/tv_fengLi"
+   	 	android:layout_width="fill_parent"
+    	android:layout_height="30dp"
+    	android:textColor="@color/AntiqueWhite"
+    	android:layout_below="@+id/tv_shiDu"
+    	android:paddingLeft="45dp"
+    	android:text="风力提示" />
+
+    <ListView
+        android:id="@+id/lv_weather"
+        android:layout_below="@+id/tv_fengLi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/grey"
+        android:layout_alignParentLeft="true" >
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/iv_weather"
+        android:layout_width="97dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/tv_fengLi"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/weather_normal" />
+
+    <TextView
+        android:id="@+id/tv_shiDu"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tv_weather"
+        android:paddingLeft="45dp"
+        android:text="湿度"
+        android:textColor="@color/AntiqueWhite" />
+
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/tv_wenDu"
+        android:layout_centerHorizontal="true"
+        android:text="多云转晴"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/darkgrey" />
+
+    <TextView
+        android:id="@+id/tv_wenDu"
+        android:layout_width="80dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tv_diDian"
+        android:layout_marginRight="14dp"
+        android:layout_toLeftOf="@+id/tv_weather"
+        android:gravity="center"
+        android:text="31"
+        android:textColor="@color/darkyellow"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/tv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/top_back"
+        android:gravity="center_vertical"
+        android:text="@string/top_back2"
+        android:textColor="@color/darkGreen" />
+   
+</RelativeLayout>
